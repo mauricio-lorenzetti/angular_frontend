@@ -1,0 +1,24 @@
+<ul>
+  <h2>Oportunidades</h2>
+    <li *ngFor="let o of opp, let i = index">
+        <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  {{o.name}}
+                </mat-panel-title>
+                <mat-panel-description>
+                    <span class=confirm *ngIf="o.isActive">Ativo</span>
+                    <span class=cancel *ngIf="!o.isActive">Inativo</span>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <mat-slide-toggle [(ngModel)]="opp[i].isActive" (change)="onChange()"></mat-slide-toggle>
+              <mat-list>
+                <mat-list-item>Limite: {{o.limit}}</mat-list-item>
+                <mat-list-item>Taxa de Juros: {{o.interest}}</mat-list-item>
+                <mat-list-item>Duração: {{o.term}}</mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+        </mat-accordion>          
+    </li>
+</ul>

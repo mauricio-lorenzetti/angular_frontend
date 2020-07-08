@@ -1,0 +1,9 @@
+table {
+    min-width: 124px;
+    width: 100%;
+}
+
+.row:hover {
+    background-color: rgba(0, 0, 0, .05);
+    cursor: pointer;
+}

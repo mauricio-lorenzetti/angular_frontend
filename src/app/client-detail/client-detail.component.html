@@ -1,0 +1,15 @@
+<div *ngIf="client">
+    <mat-card>
+        <mat-card-title>{{client.name | uppercase}}</mat-card-title>
+        <mat-card-content>
+            <mat-list>
+                <mat-list-item>Email: {{client.email}}</mat-list-item>
+                <mat-list-item>Status: {{client.isActive}}</mat-list-item>
+                <mat-list-item>Phone: {{client.phone}}</mat-list-item>
+                <mat-list-item>Rendimento: {{client.revenue}}</mat-list-item>
+                <mat-list-item>Termos e Condições: {{client.agreedTerms}}</mat-list-item>
+            </mat-list>
+        </mat-card-content>
+        <app-client-opp email="{{client.email}}"></app-client-opp>
+    </mat-card>
+</div>
